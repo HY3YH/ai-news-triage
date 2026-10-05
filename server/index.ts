@@ -14,7 +14,7 @@ const PORT = Number(process.env.PORT ?? 8787);
 const STALE_MS = 30 * 60 * 1000; // re-fetch on start if older than 30 min
 
 let snapshot: Snapshot = { fetchedAt: new Date(0).toISOString(), items: [], errors: [] };
-let refreshing = false;
+let inflight: Promise<Snapshot> | null = null;
 
 async function loadSnapshotFromDisk(): Promise<boolean> {
   try {
@@ -26,20 +26,27 @@ async function loadSnapshotFromDisk(): Promise<boolean> {
   }
 }
 
+/**
+ * Refresh the snapshot. Concurrent callers while a refresh is in progress
+ * are coalesced into the single running refresh and all await its result
+ * (R1.5), rather than racing or receiving stale data.
+ */
 async function refresh(): Promise<Snapshot> {
-  if (refreshing) return snapshot;
-  refreshing = true;
-  try {
-    const next = await fetchAllFeeds();
-    if (next.items.length > 0) {
-      snapshot = next;
-      await mkdir(DATA_DIR, { recursive: true });
-      await writeFile(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2));
+  if (inflight) return inflight;
+  inflight = (async () => {
+    try {
+      const next = await fetchAllFeeds();
+      if (next.items.length > 0) {
+        snapshot = next;
+        await mkdir(DATA_DIR, { recursive: true });
+        await writeFile(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2));
+      }
+      return snapshot;
+    } finally {
+      inflight = null;
     }
-    return snapshot;
-  } finally {
-    refreshing = false;
-  }
+  })();
+  return inflight;
 }
 
 export function createApp() {
@@ -47,7 +54,7 @@ export function createApp() {
   app.use(express.json());
 
   app.get("/api/health", (_req, res) => {
-    res.json({ ok: true, refreshing });
+    res.json({ ok: true, refreshing: inflight !== null });
   });
 
   app.get("/api/items", (_req, res) => {

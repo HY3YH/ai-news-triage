@@ -31,8 +31,7 @@ slow feed.
 #### Acceptance Criteria
 
 1. WHEN a refresh runs THEN the system SHALL request every Source in
-   `server/feeds.ts` concurrently with a per-feed timeout of at most 15
-   seconds.
+   `server/feeds.ts` concurrently with a per-feed timeout of 12 seconds.
 2. WHEN a Source request fails or times out THEN the system SHALL record a
    SourceError for that source and continue processing the remaining feeds.
 3. WHEN zero items are produced by a refresh THEN the system SHALL keep the
