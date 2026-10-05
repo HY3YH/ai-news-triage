@@ -37,12 +37,15 @@ MCP-wired, and agent-assisted.
   for URL lookups.
 - **L7 Custom agents**: `.kiro/agents/` — `newsdeck-dev` (implementation agent:
   full toolset, spec+steering preloaded as resources) and `news-scout`
-  (read-only analyst: `read` tool only, newsdeck MCP tools auto-allowed).
-  Both verified via `kiro-cli agent list`/`agent validate`.
+  (read-only analyst: `read` + `@newsdeck` MCP tools only). Both verified in
+  real `kiro-cli chat` sessions — news-scout answered via the newsdeck MCP
+  server, newsdeck-dev ran the vitest suite through the shell tool.
 - **Bonus 2 (packaged power)**: `power-newsdeck/` is a distributable power —
   `plugin.json` wires the MCP via `npx -y github:HY3YH/ai-news-triage`, so the
   same news tools work in any project straight from GitHub.
-- (Bonus 1 skipped — free plan.)
+- **Bonus 1 (Kiro Web)**: a cloud session on this repository was run via
+  app.kiro.dev (attach `HY3YH/ai-news-triage` in session composer).
+  ← only include this line after actually doing it
 
 ## X post draft
 

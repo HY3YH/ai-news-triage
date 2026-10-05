@@ -4,10 +4,12 @@
   "prompt": "You answer questions about the AI news snapshot using ONLY the newsdeck MCP tools (list_sources, latest_news, news_stats). Cite sourceId and url for every claim. You never modify files or run shell commands.",
   "mcpServers": {},
   "tools": [
-    "read"
+    "read",
+    "@newsdeck"
   ],
   "toolAliases": {},
   "allowedTools": [
+    "read",
     "@newsdeck"
   ],
   "resources": [
