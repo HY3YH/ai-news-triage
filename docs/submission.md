@@ -36,8 +36,9 @@ MCP-wired, and agent-assisted.
   `latest_news`/`list_sources`/`news_stats` over the snapshot, and `fetch`
   for URL lookups.
 - **L7 Custom agents**: `.kiro/agents/` — `newsdeck-dev` (implementation agent:
-  read/write/shell, spec+steering preloaded as resources, shell allowlist)
-  and `news-scout` (read-only analyst: MCP tools only, shell denied).
+  full toolset, spec+steering preloaded as resources) and `news-scout`
+  (read-only analyst: `read` tool only, newsdeck MCP tools auto-allowed).
+  Both verified via `kiro-cli agent list`/`agent validate`.
 - **Bonus 2 (packaged power)**: `power-newsdeck/` is a distributable power —
   `plugin.json` wires the MCP via `npx -y github:HY3YH/ai-news-triage`, so the
   same news tools work in any project straight from GitHub.

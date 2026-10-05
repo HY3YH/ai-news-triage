@@ -48,7 +48,7 @@ starts the MCP stdio server.
 | L4 Property-based testing | `tests/` — 17 fast-check properties over `shared/` (dedupe idempotence, ordering, filter laws, tagger purity, normalize robustness); properties enumerated in `design.md` |
 | L5 Powers | `.kiro/powers/newsdeck/` — plugin.json + 2 skills |
 | L6 MCP | `.kiro/settings/mcp.json` — `newsdeck` (custom zero-dep stdio server in `mcp-server/`) + `fetch` |
-| L7 Custom agents | `.kiro/agents/` — `newsdeck-dev` (implementation, scoped shell perms) and `news-scout` (read-only analyst, MCP-only) |
+| L7 Custom agents | `.kiro/agents/` — `newsdeck-dev` (implementation, spec+steering resources) and `news-scout` (read-only analyst, MCP-only). Verified via `kiro-cli agent list` |
 | Bonus 2 — packaged power | `power-newsdeck/` — installable via Powers panel → Import power from GitHub |
 
 ## Layout
