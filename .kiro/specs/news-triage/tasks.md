@@ -1,0 +1,34 @@
+# Implementation Plan — NewsDeck
+
+- [x] 1. Project scaffold — package.json, tsconfig, vite config, index.html
+  - _Requirements: all_
+- [x] 2. Shared core (`shared/`)
+  - [x] 2.1 `types.ts` — NewsItem / FeedSource / TriageState / FilterSet / Snapshot
+    - _Requirements: R2_
+  - [x] 2.2 `normalize.ts` — canonicalizeUrl, stableId, htmlToText, truncate, normalizeEntry
+    - _Requirements: R2_
+  - [x] 2.3 `dedupe.ts` — dedupeItems, sortByDateDesc
+    - _Requirements: R3_
+  - [x] 2.4 `tagger.ts` — DEFAULT_TAG_RULES, applyTagRules, tagItem
+    - _Requirements: R4_
+  - [x] 2.5 `filters.ts` — matchesStatus, matchesFilter, applyFilters
+    - _Requirements: R5_
+- [x] 3. Server (`server/`)
+  - [x] 3.1 `feeds.ts` — curated feed registry
+  - [x] 3.2 `fetch.ts` — concurrent fetch, normalize, tag, dedupe, sort
+    - _Requirements: R1, R2, R3, R4_
+  - [x] 3.3 `index.ts` — Express API + snapshot disk cache + static hosting
+    - _Requirements: R1, R7_
+  - [x] 3.4 `snapshot.ts` — standalone snapshot writer
+- [x] 4. Client (`src/`)
+  - [x] 4.1 `api.ts`, `state.ts` — fetch client + localStorage triage store
+    - _Requirements: R6_
+  - [x] 4.2 `Sidebar`, `TopBar`, `NewsCard`, `App` — board UI
+    - _Requirements: R5, R6, R7_
+  - [x] 4.3 `styles.css` — dark theme design system
+- [x] 5. Property-based tests (`tests/`) covering all Correctness Properties
+  - _Requirements: R2–R5_
+- [x] 6. MCP server (`mcp-server/index.mjs`) — zero-dep stdio JSON-RPC
+- [x] 7. `.kiro/` artifacts — steering, hooks, powers, agents, mcp.json
+- [x] 8. `power-newsdeck/` — packaged distributable power (Bonus 2)
+- [x] 9. README + lesson map + demo video

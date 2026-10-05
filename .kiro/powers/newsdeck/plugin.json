@@ -1,0 +1,16 @@
+{
+  "name": "newsdeck",
+  "version": "1.0.0",
+  "description": "NewsDeck AI news triage project — feed registry, triage state model, and tagging conventions. Loads when you mention 'newsdeck', 'triage', 'rss', or 'feed'.",
+  "keywords": ["newsdeck", "news-deck", "triage", "rss", "feed", "ニュース"],
+  "skills": [
+    {
+      "name": "project-setup",
+      "path": "skills/project-setup/SKILL.md"
+    },
+    {
+      "name": "tagging-rules",
+      "path": "skills/tagging-rules/SKILL.md"
+    }
+  ]
+}

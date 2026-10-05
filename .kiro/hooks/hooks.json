@@ -1,0 +1,32 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Property-test shared logic on save",
+      "trigger": "PostFileSave",
+      "matcher": "shared/.*\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "npx vitest run tests/ --reporter=basic"
+      }
+    },
+    {
+      "name": "Validate feed registry on save",
+      "trigger": "PostFileSave",
+      "matcher": "server/feeds\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "npx tsx -e \"import('./server/feeds.ts').then(m=>{for(const f of m.FEEDS){if(!f.id||!f.url||!f.color)throw new Error('feed missing field: '+JSON.stringify(f))}console.log('feeds OK:',m.FEEDS.length)})\""
+      }
+    },
+    {
+      "name": "Typecheck on component save",
+      "trigger": "PostFileSave",
+      "matcher": "src/.*\\.(ts|tsx)$",
+      "action": {
+        "type": "command",
+        "command": "npx tsc -b --pretty false 2>&1 | head -20"
+      }
+    }
+  ]
+}

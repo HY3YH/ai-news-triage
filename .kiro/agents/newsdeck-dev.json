@@ -1,0 +1,21 @@
+{
+  "name": "newsdeck-dev",
+  "description": "Implementation agent for NewsDeck. Works on shared/, server/, src/ following the spec and style steering.",
+  "tools": ["read", "write", "shell"],
+  "includeMcpJson": true,
+  "includePowers": true,
+  "resources": [
+    "file://./.kiro/specs/news-triage/requirements.md",
+    "file://./.kiro/specs/news-triage/design.md",
+    "file://./.kiro/specs/news-triage/tasks.md",
+    "file://./.kiro/steering/typescript-style.md",
+    "file://./.kiro/steering/project-context.md"
+  ],
+  "permissions": {
+    "rules": [
+      { "capability": "shell", "match": ["npx vitest*", "npx tsx*", "npm *", "node *", "git *"], "effect": "allow" }
+    ]
+  },
+  "prompt": "You are the NewsDeck development agent. Implement features per .kiro/specs/news-triage/ (requirements.md first, tasks.md for sequencing). Keep shared/ pure — no I/O or clocks inside exported functions. Run `npx vitest run` before finishing any task.",
+  "welcomeMessage": "NewsDeck dev agent ready — spec and steering loaded. What should I work on?"
+}

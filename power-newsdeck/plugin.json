@@ -1,0 +1,18 @@
+{
+  "name": "newsdeck",
+  "version": "1.0.0",
+  "description": "Ask Kiro about the latest AI news. Connects the newsdeck MCP server (latest headlines, per-source counts, tag stats from the NewsDeck triage board snapshot).",
+  "keywords": ["news", "newsdeck", "ai news", "rss", "headlines", "ニュース"],
+  "mcpServers": {
+    "newsdeck": {
+      "command": "npx",
+      "args": ["-y", "github:HY3YH/ai-news-triage"]
+    }
+  },
+  "skills": [
+    {
+      "name": "ask-the-news",
+      "path": "skills/ask-the-news/SKILL.md"
+    }
+  ]
+}

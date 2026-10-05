@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "newsdeck": {
+      "command": "node",
+      "args": ["mcp-server/index.mjs"],
+      "disabled": false,
+      "autoApprove": ["list_sources", "latest_news", "news_stats"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "disabled": false
+    }
+  }
+}
