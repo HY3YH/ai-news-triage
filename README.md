@@ -25,12 +25,18 @@ Built with [Kiro](https://kiro.dev) for the **Kiro University Challenge** 2026
 
 ## Quick start
 
+Requires **Node 20+** (developed on 22) and npm. No other services or API keys.
+
 ```bash
 npm install
-npm run snapshot   # fetch all feeds -> server/data/snapshot.json
 npm run dev        # api :8787 + vite :5173 -> open http://localhost:5173
-npm test           # vitest + fast-check property suite
 ```
+
+The repo ships a fresh snapshot (`server/data/snapshot.json`), so the board
+renders real items immediately — even fully offline. `npm run snapshot`
+re-fetches all feeds; `npm test` runs the vitest + fast-check property suite;
+`npx tsx server/index.ts` runs the API alone; `node mcp-server/index.mjs`
+starts the MCP stdio server.
 
 ## Kiro University Challenge — lesson map
 
