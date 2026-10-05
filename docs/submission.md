@@ -44,8 +44,8 @@ MCP-wired, and agent-assisted.
   `plugin.json` wires the MCP via `npx -y github:HY3YH/ai-news-triage`, so the
   same news tools work in any project straight from GitHub.
 - **Bonus 1 (Kiro Web)**: a cloud session on this repository was run via
-  app.kiro.dev (attach `HY3YH/ai-news-triage` in session composer).
-  ← only include this line after actually doing it
+  app.kiro.dev — it reviewed the spec against the code, found a real gap
+  (refresh coalescing), and opened a fix PR.
 
 ## X post draft
 
