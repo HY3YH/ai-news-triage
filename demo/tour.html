@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NewsDeck — .kiro tour</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0b0f17; color:#e8edf6;
+    font-family:"Segoe UI","Inter","Hiragino Kaku Gothic ProN",system-ui,sans-serif; }
+  .slide { width:1600px; height:900px; display:flex; flex-direction:column;
+    justify-content:center; padding:80px 110px; position:relative; overflow:hidden; }
+  .slide::after { content:""; position:absolute; inset:0;
+    background:radial-gradient(900px 400px at 85% -5%,rgba(124,108,255,.14),transparent 60%); }
+  .kicker { font-size:15px; letter-spacing:3px; text-transform:uppercase;
+    color:#7c6cff; font-weight:700; margin-bottom:14px; }
+  h1 { font-size:56px; line-height:1.15; margin-bottom:18px; }
+  .sub { font-size:22px; color:#9aa5bb; max-width:1000px; line-height:1.5; }
+  .lesson { display:flex; align-items:center; gap:22px; margin-bottom:26px; }
+  .lnum { font-size:15px; font-weight:700; color:#fff; background:linear-gradient(135deg,#7c6cff,#5a8bff);
+    border-radius:999px; padding:8px 20px; white-space:nowrap; }
+  h2 { font-size:40px; }
+  .files { font-family:Consolas,monospace; font-size:19px; color:#7cc7ff; margin:6px 0 22px; }
+  pre { background:#111726; border:1px solid #232d44; border-radius:14px;
+    padding:26px 30px; font-size:19px; line-height:1.55; color:#c9d3e6;
+    font-family:Consolas,monospace; max-width:1250px; }
+  pre .c { color:#5b6c8a; } pre .k { color:#8ab4ff; } pre .s { color:#6ee7a8; }
+  .pts { display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
+  .pt { background:#151d2e; border:1px solid #232d44; border-radius:10px;
+    padding:10px 18px; font-size:17px; color:#9aa5bb; }
+  .pt b { color:#e8edf6; font-weight:600; }
+  .outro-links { font-size:24px; color:#7cc7ff; line-height:2; }
+  .badge-row { display:flex; gap:12px; margin-top:34px; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <div class="kicker">Kiro University Challenge 2026 — Final</div>
+  <h1>NewsDeck</h1>
+  <p class="sub">An AI news triage board: ten RSS feeds → normalized, deduplicated,
+    auto-tagged cards you filter, star and clear.<br>
+    Every part of the build runs on Kiro features — here's the tour.</p>
+  <div class="badge-row">
+    <span class="pt"><b>React 19 + TS</b> client</span>
+    <span class="pt"><b>Express</b> fetch server + snapshot cache</span>
+    <span class="pt"><b>fast-check</b> property tests</span>
+    <span class="pt"><b>zero-dep MCP</b> server</span>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 1</span><h2>Spec-driven development</h2></div>
+  <div class="files">.kiro/specs/news-triage/{requirements.md, design.md, tasks.md}</div>
+  <pre><span class="c"># requirements.md — EARS notation, 7 requirements, glossary</span>
+WHEN a Source request fails or times out
+THE SYSTEM SHALL record a SourceError and continue with remaining feeds
+
+WHEN items are listed
+THE SYSTEM SHALL order them by publishedAt descending,
+breaking ties on id for a stable total order</pre>
+  <div class="pts"><span class="pt">requirements → design → tasks</span>
+    <span class="pt"><b>15</b> correctness properties feed the PBT suite</span></div>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 2</span><h2>Steering documents</h2></div>
+  <div class="files">.kiro/steering/{typescript-style.md, project-context.md}</div>
+  <pre><span class="c"># typescript-style.md</span>
+- shared/ is pure: no DOM, no Node APIs, no Date.now() — pass
+  timestamps in. Keeps every function property-testable.
+- No any — use unknown and narrow. Side effects live in
+  server/ and src/ only.</pre>
+  <div class="pts"><span class="pt">always-on conventions</span>
+    <span class="pt">architecture map + invariants</span></div>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 3</span><h2>Hooks</h2></div>
+  <div class="files">.kiro/hooks/hooks.json — 3 PostFileSave hooks</div>
+  <pre><span class="k">"name"</span>: <span class="s">"Property-test shared logic on save"</span>,
+<span class="k">"trigger"</span>: <span class="s">"PostFileSave"</span>,
+<span class="k">"matcher"</span>: <span class="s">"shared/.*\\.ts$"</span>,
+<span class="k">"action"</span>: { <span class="k">"command"</span>: <span class="s">"npx vitest run tests/"</span> }
+<span class="c"># + feed-registry validation & typecheck hooks</span></pre>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 4</span><h2>Property-based testing</h2></div>
+  <div class="files">tests/ — 17 fast-check properties over shared/ · design.md §Correctness Properties</div>
+  <pre><span class="c">// real bug caught during the build:</span>
+<span class="c">// normalizeEntry threw on null input — PBT surfaced it</span>
+it(<span class="s">"dedupe is idempotent"</span>, () =&gt;
+  fc.assert(fc.property(fc.array(arbItem), xs =&gt;
+    expect(dedupeItems(dedupeItems(xs))).toEqual(dedupeItems(xs)))))</pre>
+  <div class="pts"><span class="pt">dedupe · ordering · filter laws · tagger purity · normalize robustness</span></div>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 5</span><h2>Powers</h2></div>
+  <div class="files">.kiro/powers/newsdeck/plugin.json + 2 skills</div>
+  <pre>{
+  <span class="k">"name"</span>: <span class="s">"newsdeck"</span>,
+  <span class="k">"keywords"</span>: [<span class="s">"newsdeck"</span>, <span class="s">"triage"</span>, <span class="s">"rss"</span>, <span class="s">"feed"</span>],
+  <span class="k">"skills"</span>: [project-setup, tagging-rules]
+}
+<span class="c"># loads on-demand when keywords match</span></pre>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 6</span><h2>MCP</h2></div>
+  <div class="files">.kiro/settings/mcp.json → newsdeck + fetch · mcp-server/index.mjs</div>
+  <pre><span class="c"># zero-dependency stdio MCP server over the news snapshot</span>
+tools: <span class="s">latest_news</span>(limit, sourceId, tag)
+       <span class="s">list_sources</span> · <span class="s">news_stats</span>
+autoApprove: read-only tools</pre>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Lesson 7</span><h2>Custom agents</h2></div>
+  <div class="files">.kiro/agents/{newsdeck-dev.json, news-scout.json}</div>
+  <pre><span class="k">newsdeck-dev</span>  — tools:[read,write,shell], spec+steering as
+  resources, shell allowlist for vitest/tsx/npm/git
+<span class="k">news-scout</span>    — read-only analyst, MCP tools only,
+  shell denied entirely</pre>
+</section>
+
+<section class="slide">
+  <div class="lesson"><span class="lnum">Bonus 2</span><h2>Packaged power</h2></div>
+  <div class="files">power-newsdeck/ — installable from GitHub via Powers panel</div>
+  <pre><span class="k">"mcpServers"</span>: { <span class="s">"newsdeck"</span>: {
+  <span class="k">"command"</span>: <span class="s">"npx"</span>,
+  <span class="k">"args"</span>: [<span class="s">"-y"</span>, <span class="s">"github:HY3YH/ai-news-triage"</span>] } }
+<span class="c"># snapshot.json ships inside the package → real data anywhere</span></pre>
+</section>
+
+<section class="slide">
+  <div class="kicker">thanks for watching</div>
+  <h1>NewsDeck</h1>
+  <p class="outro-links">
+    github.com/HY3YH/ai-news-triage<br>
+    #KiroUniversity #BuildWithKiro
+  </p>
+</section>
+
+</body>
+</html>

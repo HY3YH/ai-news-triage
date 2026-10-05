@@ -1,5 +1,7 @@
 node_modules/
 dist/
 server/data/cache.json
+demo/out/
+demo/demo.mp4
 *.local
 .DS_Store
