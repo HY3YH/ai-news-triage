@@ -35,35 +35,43 @@ FNV-1a hash, stable across runs and machines. `FilterSet` composes
 
 ## Correctness Properties
 
-Each property below is exercised by fast-check in `tests/`:
+The following 16 properties are exercised by fast-check in `tests/` (7 dedupe,
+5 filters, 4 tagger). An additional plain example-based test asserts that known
+keywords land their tag, for 17 `it(...)` cases total.
 
 1. **Dedupe idempotence** — `dedupeItems(dedupeItems(xs)) == dedupeItems(xs)`
 2. **Dedupe order-preserving subset** — output ⊆ input, in first-occurrence
-   order; no two outputs share a canonical URL
-3. **Tracking-param collapse** — items differing only in `utm_*`-style query
+   order
+3. **Dedupe URL uniqueness** — no two outputs share a canonical URL
+4. **Tracking-param collapse** — items differing only in `utm_*`-style query
    params dedupe to one
-4. **Sort totality** — `sortByDateDesc` returns a same-length permutation,
+5. **Sort totality** — `sortByDateDesc` returns a same-length permutation,
    `publishedAt` non-increasing, `id` ascending on ties
-5. **Canonicalize idempotence** — `canonicalizeUrl(canonicalizeUrl(u)) ==
+6. **Canonicalize idempotence** — `canonicalizeUrl(canonicalizeUrl(u)) ==
    canonicalizeUrl(u)` and output never contains `utm_`
-6. **Filter subset law** — `applyFilters` output ⊆ input
-7. **Filter composition symmetry** — source/status/tag/query commute
-8. **Empty-filter identity** — cleared filters return input unchanged
-9. **Case-insensitive search** — upper/lower queries match identically
-10. **Status complements** — unread ↔ ¬read, starred ↔ starred flag, etc.
-11. **Tagger determinism** — same input+rules ⇒ same sorted-unique output
-12. **Tagger closure** — output tags ⊆ declared rule tags
-13. **Tagger monotonicity** — adding a matching keyword never drops a tag
-14. **Normalize robustness** — `normalizeEntry` returns null, never throws,
+7. **htmlToText safety** — never throws; never leaks literal markup tags
+8. **Filter subset law** — `applyFilters` output ⊆ input
+9. **Filter composition symmetry** — source/status/tag/query commute
+10. **Empty-filter identity** — cleared filters return input unchanged
+11. **Case-insensitive search** — upper/lower queries match identically
+12. **Status complements** — unread ↔ ¬read, starred ↔ starred flag, etc.
+13. **Tagger determinism** — same input+rules ⇒ same sorted-unique output
+14. **Tagger closure** — output tags ⊆ declared rule tags
+15. **Tagger monotonicity** — adding a matching keyword never drops a tag
+16. **Normalize robustness** — `normalizeEntry` returns null, never throws,
     on arbitrary input; valid output always has 8-hex id, nonempty
     title/url, parseable ISO date
-15. **htmlToText safety** — never throws; never leaks literal markup tags
 
 ## Error model
 
 Feed failures funnel into `Snapshot.errors[]` and a UI warning banner. The
 board renders whatever the snapshot holds — including a stale one — so no
 single feed outage can blank the app.
+
+`refresh()` holds a single in-flight promise: concurrent `/api/refresh`
+requests (and the startup background refresh) are coalesced into the one
+running fetch and all await its result (R1.5), so overlapping refreshes never
+race or double-write the snapshot.
 
 ## MCP server
 
