@@ -38,7 +38,7 @@ npm test           # vitest + fast-check property suite
 |---|---|
 | L1 Spec-driven development | `.kiro/specs/news-triage/` — requirements → design → tasks (EARS) |
 | L2 Steering documents | `.kiro/steering/` — TS/React style + project context |
-| L3 Hooks | `.kiro/hooks/hooks.json` — PostFileSave: PBT suite, feed-registry validation, typecheck |
+| L3 Hooks | `.kiro/hooks/` — PostFileSave hooks in both CLI (`hooks.json`) and IDE (`*.kiro.hook`) formats: PBT suite, feed-registry validation, typecheck |
 | L4 Property-based testing | `tests/` — 17 fast-check properties over `shared/` (dedupe idempotence, ordering, filter laws, tagger purity, normalize robustness); properties enumerated in `design.md` |
 | L5 Powers | `.kiro/powers/newsdeck/` — plugin.json + 2 skills |
 | L6 MCP | `.kiro/settings/mcp.json` — `newsdeck` (custom zero-dep stdio server in `mcp-server/`) + `fetch` |

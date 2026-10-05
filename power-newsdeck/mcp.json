@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "newsdeck": {
+      "command": "npx",
+      "args": ["-y", "github:HY3YH/ai-news-triage"]
+    }
+  }
+}

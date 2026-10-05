@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Validate feed registry on save",
+  "description": "Check every feed entry has id/url/color/lang when feeds.ts is saved.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["server/feeds.ts"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "npx tsx -e \"import('./server/feeds.ts').then(m=>{for(const f of m.FEEDS){if(!f.id||!f.url||!f.color)throw new Error('feed missing field')}console.log('feeds OK:',m.FEEDS.length)})\""
+  }
+}

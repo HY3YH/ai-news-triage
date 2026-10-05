@@ -1,6 +1,19 @@
 {
-  "fetchedAt": "2026-10-05T13:22:57.880Z",
+  "fetchedAt": "2026-10-05T13:39:51.438Z",
   "items": [
+    {
+      "id": "fd99dbae",
+      "title": "Bringing predictive analytics to the agentic AI era",
+      "url": "https://www.technologyreview.com/2026/10/05/1143813/bringing-predictive-analytics-to-the-agentic-ai-era/",
+      "sourceId": "mit",
+      "publishedAt": "2026-10-05T13:29:32.000Z",
+      "summary": "In 2026, the question for enterprise AI is no longer whether predictive models can outperform statistical forecasts—that argument is settled. The big question now is how to enable predictive systems to act on their own conclusions without…",
+      "tags": [
+        "model",
+        "tool",
+        "tutorial"
+      ]
+    },
     {
       "id": "ecc8bb28",
       "title": "3 Statsmodels Tricks for Time Series Analysis & Forecasting",
@@ -1489,17 +1502,6 @@
       "tags": [
         "release",
         "research"
-      ]
-    },
-    {
-      "id": "c1cd9df8",
-      "title": "The AI Hype Index: AI loves cheating",
-      "url": "https://www.technologyreview.com/2026/09/23/1144940/ai-hype-index-ai-loves-cheating/",
-      "sourceId": "mit",
-      "publishedAt": "2026-09-23T09:00:00.000Z",
-      "summary": "Brace yourself: It turns out AI is being optimized for cheating. OpenAI’s agents hacked into Hugging Face to get the answers to a cybersecurity test. Next, they solved a prestigious math problem (or just stole from two top mathematicians’…",
-      "tags": [
-        "tool"
       ]
     },
     {

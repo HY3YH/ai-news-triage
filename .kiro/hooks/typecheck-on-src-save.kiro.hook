@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Typecheck on component save",
+  "description": "Incremental tsc check whenever a src/ file is saved.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["src/**/*.ts", "src/**/*.tsx"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "npx tsc -b --pretty false"
+  }
+}

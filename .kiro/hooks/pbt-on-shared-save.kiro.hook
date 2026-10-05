@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Property-test shared logic on save",
+  "description": "Run the fast-check suite whenever a pure shared/ module is saved.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["shared/**/*.ts"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "npx vitest run tests/ --reporter=basic"
+  }
+}
