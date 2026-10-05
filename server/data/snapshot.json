@@ -1,6 +1,69 @@
 {
-  "fetchedAt": "2026-10-05T13:39:51.438Z",
+  "fetchedAt": "2026-10-05T14:51:33.266Z",
   "items": [
+    {
+      "id": "70391f39",
+      "title": "Researchers are tracking a Chinese AI ‘agent fleet’",
+      "url": "https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/",
+      "sourceId": "techcrunch",
+      "publishedAt": "2026-10-05T14:35:09.000Z",
+      "summary": "Independent researchers discovered an agent swarm that seems to be running on Tencent's infrastructure and targeting Alibaba's map service, Amap.",
+      "tags": [
+        "research",
+        "tool"
+      ]
+    },
+    {
+      "id": "762f24f6",
+      "title": "Meet the Startup Battlefield 200 judges who’ll decide the winner at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026/",
+      "sourceId": "techcrunch",
+      "publishedAt": "2026-10-05T14:30:00.000Z",
+      "summary": "Meet the final five Startup Battlefield judges who'll decide who wins the pitch competition at TechCrunch Disrupt 2026. Get your pass now to save up to $100, and get a second at 50% off.",
+      "tags": []
+    },
+    {
+      "id": "b84f13b1",
+      "title": "Sen. Adam Schiff on AI regulation, free speech, and impeaching Trump one more time",
+      "url": "https://www.theverge.com/podcast/1004286/senator-adam-schiff-ai-trump-regulation-corruption",
+      "sourceId": "verge",
+      "publishedAt": "2026-10-05T14:30:00.000Z",
+      "summary": "Today, I’m talking with Senator Adam Schiff, a Democrat from California. Sen. Schiff sits on a number of committees with oversight into tech and AI: intellectual property, antitrust, privacy and technology — it’s all there. I really wanted…",
+      "tags": [
+        "policy"
+      ]
+    },
+    {
+      "id": "09c6241b",
+      "title": "The final Disrupt Stage lineup: Three days of conversations you won’t hear anywhere outside of TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/10/05/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026/",
+      "sourceId": "techcrunch",
+      "publishedAt": "2026-10-05T14:00:00.000Z",
+      "summary": "The full TechCrunch Disrupt Stage lineup revealed, featuring Max Hodak, Mark Wahlberg, Benchmark partners, and more. Register now to save up to $100 on your pass and get a second at 50% off.",
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "id": "61a19cd8",
+      "title": "Meta Muse Explained: What It Is, How It Works, and What It Can Do",
+      "url": "https://www.kdnuggets.com/meta-muse-explained-what-it-is-how-it-works-and-what-it-can-do",
+      "sourceId": "kdnuggets",
+      "publishedAt": "2026-10-05T14:00:00.000Z",
+      "summary": "Meta has entered the AI agent race in a big way.",
+      "tags": [
+        "tool"
+      ]
+    },
+    {
+      "id": "e497d656",
+      "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
+      "sourceId": "verge",
+      "publishedAt": "2026-10-05T13:47:14.000Z",
+      "summary": "Getting some extra storage space on your Mac could be as easy as deleting Apple's AI features with a new open-source command line tool called RemoveMacAI. There used to be a single Settings toggle for disabling Apple Intelligence, but that…",
+      "tags": []
+    },
     {
       "id": "fd99dbae",
       "title": "Bringing predictive analytics to the agentic AI era",
@@ -12,6 +75,17 @@
         "model",
         "tool",
         "tutorial"
+      ]
+    },
+    {
+      "id": "eb59720b",
+      "title": "OpenAI is sticking more ads in ChatGPT",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004655/openai-chatgpt-visual-ads",
+      "sourceId": "verge",
+      "publishedAt": "2026-10-05T13:09:48.000Z",
+      "summary": "OpenAI's latest ad format will put images of sponsored products and services on your screen. The ads, which OpenAI will begin testing in the US later this month, will \"initially\" appear when you generate images with ChatGPT, according to…",
+      "tags": [
+        "model"
       ]
     },
     {
@@ -765,17 +839,6 @@
       ]
     },
     {
-      "id": "2406b6e5",
-      "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-      "sourceId": "verge",
-      "publishedAt": "2026-10-02T20:08:40.000Z",
-      "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI agents, as reported earlier by TechCrunch. In an update on Friday, Apple says it's rolling out new controls to \"ensure that users who genuinely wish…",
-      "tags": [
-        "tool"
-      ]
-    },
-    {
       "id": "5b13150d",
       "title": "Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass",
       "url": "https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
@@ -791,17 +854,6 @@
       "sourceId": "techcrunch",
       "publishedAt": "2026-10-02T18:11:27.000Z",
       "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier.",
-      "tags": [
-        "tool"
-      ]
-    },
-    {
-      "id": "ea402792",
-      "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
-      "sourceId": "verge",
-      "publishedAt": "2026-10-02T18:00:00.000Z",
-      "summary": "New helpful little guy just dropped. | Photo: Allison Johnson / The Verge It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable…",
       "tags": [
         "tool"
       ]
@@ -826,17 +878,6 @@
       "summary": "This week, the White House got nearly every major tech CEO in one room — Zuckerberg, Bezos, Musk, and Anthropic’s Dario Amodei among them — to sign an AI safety pledge that President Donald Trump called “morally binding.” Trump also signed…",
       "tags": [
         "policy"
-      ]
-    },
-    {
-      "id": "e334a9b0",
-      "title": "Breaking up (with Elon Musk) is hard to do",
-      "url": "https://www.theverge.com/tech/1004177/elon-musk-unfollows-shivon-zilis",
-      "sourceId": "verge",
-      "publishedAt": "2026-10-02T17:37:36.000Z",
-      "summary": "In a throwback to MySpace-style internet drama, Shivon Zilis announced that she and the father of her four children, Elon Musk, had broken up on X. To do so, she quote-tweeted a post from \"Big Tech Alert,\" an account that, among other…",
-      "tags": [
-        "release"
       ]
     },
     {
@@ -944,15 +985,6 @@
       "tags": []
     },
     {
-      "id": "a508a748",
-      "title": "Last 24 hours: Exhibit at TechCrunch Disrupt 2026 and reach 10,000+ tech leaders",
-      "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
-      "sourceId": "techcrunch",
-      "publishedAt": "2026-10-02T14:00:00.000Z",
-      "summary": "Today is the last day to book your exhibit table at TechCrunch Disrupt 2026. From October 13–15, 10,000+ founders, investors, operators, and tech leaders will arrive at San Francisco’s Moscone West looking for companies, products, ideas,…",
-      "tags": []
-    },
-    {
       "id": "e7e3c327",
       "title": "5 Proven Techniques for Token Compression and Prompt Optimization",
       "url": "https://www.kdnuggets.com/5-proven-techniques-for-token-compression-and-prompt-optimization",
@@ -990,27 +1022,6 @@
       "sourceId": "openai",
       "publishedAt": "2026-10-02T00:00:00.000Z",
       "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
-      "tags": [
-        "model",
-        "tool"
-      ]
-    },
-    {
-      "id": "367ee674",
-      "title": "Musk’s AI chatbot Grok reportedly encouraged Trump to capture Venezuela’s president",
-      "url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
-      "sourceId": "techcrunch",
-      "publishedAt": "2026-10-01T21:08:11.000Z",
-      "summary": "President Trump reportedly asked for Grok's opinion before invading Venezuela and capturing Nicolás Maduro.",
-      "tags": []
-    },
-    {
-      "id": "064b164a",
-      "title": "ChatGPT can now virtually try on clothes for you",
-      "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
-      "sourceId": "techcrunch",
-      "publishedAt": "2026-10-01T19:21:53.000Z",
-      "summary": "OpenAI is rolling out new shopping features for ChatGPT that let users virtually try on clothing and accessories using their own photos and save products they like to a Favorites library.",
       "tags": [
         "model",
         "tool"
@@ -1090,28 +1101,6 @@
       ]
     },
     {
-      "id": "18afcb12",
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-30T20:01:45.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
-    },
-    {
-      "id": "8fc27cdf",
-      "title": "Introducing SynthID Bio",
-      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-30T15:03:07.000Z",
-      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
-      "tags": [
-        "release"
-      ]
-    },
-    {
       "id": "1d38c3c5",
       "title": "Did AI Just Solve One of Mathematics’ Biggest Problems?",
       "url": "https://www.kdnuggets.com/did-ai-just-solve-one-of-mathematics-biggest-problems",
@@ -1121,19 +1110,6 @@
       "tags": [
         "research",
         "tool"
-      ]
-    },
-    {
-      "id": "5a762b5b",
-      "title": "Ollama for Managing Local Language Models: A KDnuggets Cheat Sheet",
-      "url": "https://www.kdnuggets.com/ollama-for-managing-local-language-models-a-kdnuggets-cheat-sheet",
-      "sourceId": "kdnuggets",
-      "publishedAt": "2026-09-30T12:00:18.000Z",
-      "summary": "Ollama pulls model weights, keeps an HTTP server on port 11434, and hands any client an OpenAI-shaped endpoint pointed at your own machine. Learn how to manage, configure, and optimize using Ollama right here.",
-      "tags": [
-        "model",
-        "tool",
-        "tutorial"
       ]
     },
     {
@@ -1331,6 +1307,15 @@
       ]
     },
     {
+      "id": "93fbe5d5",
+      "title": "Welcome RL Environments to the hub",
+      "url": "https://huggingface.co/blog/rl-environments",
+      "sourceId": "huggingface",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "summary": "",
+      "tags": []
+    },
+    {
       "id": "a781d3b7",
       "title": "Are you a Codex Original?",
       "url": "https://openai.com/form/codex-originals",
@@ -1375,18 +1360,6 @@
       ]
     },
     {
-      "id": "123617c3",
-      "title": "Introducing Gemini 3.8 Live with Live Avatar",
-      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-24T16:20:39.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
       "id": "ea150f6b",
       "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
       "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
@@ -1407,17 +1380,6 @@
       "tags": []
     },
     {
-      "id": "97367d55",
-      "title": "Advancing Private AI Compute with secure, server-side memory",
-      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-23T16:00:57.000Z",
-      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
-      "tags": [
-        "release"
-      ]
-    },
-    {
       "id": "432b0dee",
       "title": "Two years of OpenAI Academy",
       "url": "https://openai.com/index/two-years-of-openai-academy",
@@ -1425,17 +1387,6 @@
       "publishedAt": "2026-09-23T16:00:00.000Z",
       "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
       "tags": []
-    },
-    {
-      "id": "829d5eef",
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-23T15:25:14.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
     },
     {
       "id": "e0236bff",
@@ -1587,18 +1538,6 @@
       ]
     },
     {
-      "id": "f603c251",
-      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-15T17:05:57.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
       "id": "84c5c9b6",
       "title": "Your Agent Aced the Task. Will It Do It Again?",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
@@ -1717,29 +1656,6 @@
       "tags": []
     },
     {
-      "id": "2ae2fabc",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-08T14:00:15.000Z",
-      "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "tags": [
-        "business"
-      ]
-    },
-    {
-      "id": "f9ddd9bd",
-      "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
-      "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-03T15:02:08.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
       "id": "9c13fe11",
       "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
       "url": "https://huggingface.co/blog/Hcompany/neomme",
@@ -1782,18 +1698,6 @@
       ]
     },
     {
-      "id": "a5fd14af",
-      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-02T16:18:31.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
       "id": "625bc172",
       "title": "Proactive cyber defense for governments and enterprises",
       "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
@@ -1823,19 +1727,6 @@
       "summary": "Here are Google’s latest AI updates from August 2026",
       "tags": [
         "release"
-      ]
-    },
-    {
-      "id": "c1f21b2a",
-      "title": "Introducing agentic video understanding with Gemini",
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-09-01T17:08:51.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release",
-        "tool"
       ]
     },
     {
@@ -1871,17 +1762,6 @@
       "tags": []
     },
     {
-      "id": "e606c47f",
-      "title": "Gemini Omni 1.1 Flash lets you build with more control",
-      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-27T16:11:32.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
-    },
-    {
       "id": "50f1748c",
       "title": "3 new ways to plan and book travel in Search",
       "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
@@ -1889,26 +1769,6 @@
       "publishedAt": "2026-08-27T16:00:00.000Z",
       "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
       "tags": []
-    },
-    {
-      "id": "1465660c",
-      "title": "Piloting the world's first double-blind AI evaluations",
-      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-27T12:59:16.000Z",
-      "summary": "Piloting the world's first double-blind AI evaluations",
-      "tags": []
-    },
-    {
-      "id": "069d7ab7",
-      "title": "Intelligent transcription with Gemini 3.5 Transcribe",
-      "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-26T17:01:00.000Z",
-      "summary": "Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.",
-      "tags": [
-        "model"
-      ]
     },
     {
       "id": "92e0ca01",
@@ -1942,141 +1802,12 @@
       "tags": [
         "model"
       ]
-    },
-    {
-      "id": "b3446463",
-      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
-      "sourceId": "huggingface",
-      "publishedAt": "2026-08-25T11:39:24.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
-    },
-    {
-      "id": "393a7819",
-      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-21T11:59:48.000Z",
-      "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "tags": [
-        "research"
-      ]
-    },
-    {
-      "id": "a6ac1117",
-      "title": "Introducing Gemini 3.7 Flash",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-13T17:04:18.000Z",
-      "summary": "",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
-      "id": "678e58b4",
-      "title": "Putting sign language AI into users’ hands",
-      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-12T14:01:59.000Z",
-      "summary": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
-      "id": "82c90849",
-      "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
-      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-08-06T15:06:15.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
-    },
-    {
-      "id": "5fe20547",
-      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
-      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-30T15:00:59.000Z",
-      "summary": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
-      "tags": [
-        "model"
-      ]
-    },
-    {
-      "id": "a026f53f",
-      "title": "We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control",
-      "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-29T16:02:10.000Z",
-      "summary": "",
-      "tags": [
-        "release"
-      ]
-    },
-    {
-      "id": "047856e3",
-      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-28T13:21:37.000Z",
-      "summary": "",
-      "tags": [
-        "model"
-      ]
-    },
-    {
-      "id": "92a58f23",
-      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
-      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-22T13:38:54.000Z",
-      "summary": "Google commits $40M in AI tokens and credits for the Genesis Mission",
-      "tags": []
-    },
-    {
-      "id": "77cdf463",
-      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-21T15:16:30.000Z",
-      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
-      "id": "d1e2636d",
-      "title": "Introducing Gemini 3.5 Flash Cyber",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-17T15:00:11.000Z",
-      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
-      "tags": [
-        "model",
-        "release"
-      ]
-    },
-    {
-      "id": "daf59c97",
-      "title": "Our approach to bioresilience",
-      "url": "https://deepmind.google/blog/our-approach-to-bioresilience/",
-      "sourceId": "deepmind",
-      "publishedAt": "2026-07-16T09:30:42.000Z",
-      "summary": "Google DeepMind and Isomorphic Labs are sharing our joint approach to bioresilience and AI models.",
-      "tags": [
-        "model"
-      ]
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "sourceId": "deepmind",
+      "message": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+    }
+  ]
 }
